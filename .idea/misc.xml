@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/drawable/button_shape.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/drawable/button_shape3.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/drawable/empty_tall_divider.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_add.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_address.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/additem.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/buyitem.xml" value="0.15" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/cart.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/check_internet.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/checkout.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/click.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/create.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/forgot.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/launcher.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/maintence.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/row_items.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/shop.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/update_item.xml" value="0.18568840579710144" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/update_popup.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/welcome.xml" value="0.10104166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -6,7 +6,13 @@ public class Orders {
     String price;
     String quantity;
     String imageurl;
-    String total;
+    String subtotal;
+    String fullname;
+    String street;
+    String phonenum;
+    String Landmark;
+    String RDC;
+
 
 
 
@@ -14,12 +20,17 @@ public class Orders {
 
     }
 
-    public Orders(String name, String price, String quantity, String imageurl, String total) {
+    public Orders(String name, String price, String quantity, String imageurl, String subtotal, String fullname, String street, String phonenum, String landmark, String RDC) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.imageurl = imageurl;
-        this.total = total;
+        this.subtotal = subtotal;
+        this.fullname = fullname;
+        this.street = street;
+        this.phonenum = phonenum;
+        Landmark = landmark;
+        this.RDC = RDC;
     }
 
     public String getName() {
@@ -54,11 +65,51 @@ public class Orders {
         this.imageurl = imageurl;
     }
 
-    public String getTotal() {
-        return total;
+    public String getSubtotal() {
+        return subtotal;
     }
 
-    public void setTotal(String total) {
-        this.total = total;
+    public void setSubtotal(String subtotal) {
+        this.subtotal = subtotal;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getPhonenum() {
+        return phonenum;
+    }
+
+    public void setPhonenum(String phonenum) {
+        this.phonenum = phonenum;
+    }
+
+    public String getLandmark() {
+        return Landmark;
+    }
+
+    public void setLandmark(String landmark) {
+        Landmark = landmark;
+    }
+
+    public String getRDC() {
+        return RDC;
+    }
+
+    public void setRDC(String RDC) {
+        this.RDC = RDC;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.addtotruck;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
@@ -19,11 +20,17 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.orhanobut.dialogplus.DialogPlus;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class SubAdapter extends FirebaseRecyclerAdapter<Orders,SubAdapter.ViewHolder> {
 
@@ -37,17 +44,24 @@ public class SubAdapter extends FirebaseRecyclerAdapter<Orders,SubAdapter.ViewHo
         super(options);
     }
 
+    private DatabaseReference database;
+
+
     @Override
-    protected void onBindViewHolder(@NonNull ViewHolder holder,final int position, @NonNull Orders model) {
+    protected void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull Orders model) {
         holder.Name.setText(model.getName());
         holder.Price.setText(model.getPrice());
         holder.Quantity.setText(model.getQuantity());
+        holder.Subtotal.setText(model.getSubtotal());
+
 
         Glide.with(holder.imageView.getContext())
                 .load(model.getImageurl())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .error(R.drawable.common_google_signin_btn_icon_dark)
                 .into(holder.imageView);
+
+
 
         holder.itemUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,22 +78,67 @@ public class SubAdapter extends FirebaseRecyclerAdapter<Orders,SubAdapter.ViewHo
                 TextView name = view.findViewById(R.id.ItemName);
                 TextView price = view.findViewById(R.id.ItemPrice);
                 EditText quantity = view.findViewById(R.id.Quantity);
+                TextView subtotal = view.findViewById(R.id.sub1);
+
 
                 Button Update = view.findViewById(R.id.Update);
 
                 name.setText(model.getName());
                 price.setText(model.getPrice());
                 quantity.setText(model.getQuantity());
+                subtotal.setText(model.getSubtotal());
+
 
                 dialogPlus.show();
+
+                String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                database = FirebaseDatabase.getInstance().getReference("Accounts").child(uid).child("Orders");
+
+                database.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        int sum =0;
+
+                        for (DataSnapshot ds : snapshot.getChildren()){
+                            Map<String,Object>map = (Map<String, Object>) ds.getValue();
+                            Object price = map.get("price");
+                            int pri =Integer.parseInt(String.valueOf(price));
+                            Object quantity = map.get("quantity");
+                            int qua =Integer.parseInt(String.valueOf(quantity));
+                            sum = pri*qua;
+                            subtotal.setText(String.valueOf(sum));
+                            map.put("subtotal",subtotal.getText().toString());
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
+
 
                 Update.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        int sum =0;
                         Map<String,Object> map = new HashMap<>();
                         map.put("quantity",quantity.getText().toString());
+                        map.put("price",price.getText().toString());
+                        Object price = map.get("price");
+                        int pri =Integer.parseInt(String.valueOf(price));
+                        Object quantity = map.get("quantity");
+                        int qua =Integer.parseInt(String.valueOf(quantity));
+                        sum = pri*qua;
+                        subtotal.setText(String.valueOf(sum));
+                        map.put("subtotal",subtotal.getText().toString());
 
-                        FirebaseDatabase.getInstance().getReference().child("Orders")
+
+
+                        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                        FirebaseDatabase.getInstance().getReference("Accounts").child(uid).child("Orders")
                                 .child(getRef(position).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
@@ -110,8 +169,9 @@ public class SubAdapter extends FirebaseRecyclerAdapter<Orders,SubAdapter.ViewHo
                 builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        FirebaseDatabase.getInstance().getReference().child("Orders")
-                                .child(getRef(position).getKey()).removeValue();
+                        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                        FirebaseDatabase.getInstance().getReference("Accounts").child(uid).child("Orders")
+                                .child(Objects.requireNonNull(getRef(position).getKey())).removeValue();
                         Toast.makeText(holder.Name.getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
 
                     }
@@ -126,6 +186,7 @@ public class SubAdapter extends FirebaseRecyclerAdapter<Orders,SubAdapter.ViewHo
                 builder.show();
             }
         });
+
     }
 
     @NonNull
@@ -138,20 +199,28 @@ public class SubAdapter extends FirebaseRecyclerAdapter<Orders,SubAdapter.ViewHo
     class ViewHolder extends RecyclerView.ViewHolder{
 
         ImageView imageView;
-        TextView Name, Price, Quantity;
+        TextView Name, Price, Quantity, Subtotal;
         Button itemUpdate,itemDelete;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+
 
             imageView = (ImageView)itemView.findViewById(R.id.imageName);
             Name = (TextView) itemView.findViewById(R.id.Name);
             Price = (TextView) itemView.findViewById(R.id.Price);
             Quantity = (TextView) itemView.findViewById(R.id.Quantity);
+            Subtotal = (TextView) itemView.findViewById(R.id.Subtotal);
+
 
             itemUpdate = (Button) itemView.findViewById(R.id.itemUpdate);
             itemDelete = (Button) itemView.findViewById(R.id.itemDelete);
+
+
+
         }
+
     }
 
 }

@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class create extends AppCompatActivity {
 
     Network network = new Network();
-    EditText user,fullname,em,pass;
+    EditText fullname,em,pass;
     FirebaseAuth Auth;
 
     @Override
@@ -30,7 +30,7 @@ public class create extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create);
 
-        user = findViewById(R.id.user);
+
         fullname= findViewById(R.id.fullname);
         em = findViewById(R.id.em);
         pass = findViewById(R.id.pass);
@@ -41,18 +41,14 @@ public class create extends AppCompatActivity {
 
 
     public void Signup(View view) {
-        String u,n,e,p;
+        String n,e,p;
 
-        u=user.getText().toString().trim();
+
         n=fullname.getText().toString().trim();
         e=em.getText().toString().trim();
         p=pass.getText().toString().trim();
 
-        if(u.isEmpty()) {
-            user.setError("Username is Required");
-            user.requestFocus();
-            return;
-        }
+
         if(n.isEmpty()) {
             fullname.setError("Full Name is Required");
             fullname.requestFocus();
@@ -86,7 +82,7 @@ public class create extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()){
-                            Account account= new Account(u,n,e);
+                            Account account= new Account(n,e);
 
                             FirebaseDatabase.getInstance().getReference("Accounts")
                                      .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

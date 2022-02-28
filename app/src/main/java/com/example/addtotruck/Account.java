@@ -1,10 +1,10 @@
 package com.example.addtotruck;
 
 public class Account {
-    public String u,n,e;
+    public String n,e;
 
-    public Account(String u, String n, String e) {
-        this.u = u;
+    public Account(String n, String e) {
+
         this.n = n;
         this.e = e;
     }

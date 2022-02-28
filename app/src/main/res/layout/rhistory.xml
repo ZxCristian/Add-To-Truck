@@ -14,7 +14,7 @@
         android:layout_margin="15dp">
 
         <ImageView
-            android:id="@+id/imageName"
+            android:id="@+id/HimageName"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:paddingLeft="10dp"
@@ -23,10 +23,10 @@
             android:src="@mipmap/ic_launcher" />
 
         <TextView
-            android:id="@+id/Name"
+            android:id="@+id/HName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageName"
+            android:layout_toEndOf="@+id/HimageName"
             android:paddingTop="10dp"
             android:text="Name"
             android:textColor="@color/black"
@@ -34,94 +34,72 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/Price"
+            android:id="@+id/HPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Name"
-            android:layout_toEndOf="@+id/Price1"
+            android:layout_below="@+id/HName"
+            android:layout_toEndOf="@+id/HPrice1"
             android:paddingTop="5dp"
             android:text=" "
             android:textColor="@color/black"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/Price1"
+            android:id="@+id/HPrice1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Name"
-            android:layout_toEndOf="@+id/imageName"
+            android:layout_below="@+id/HName"
+            android:layout_toEndOf="@+id/HimageName"
             android:paddingTop="5dp"
             android:text="Price: "
             android:textColor="@color/black"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/Quantity"
+            android:id="@+id/HQuantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Price"
-            android:layout_toEndOf="@+id/Quantity1"
+            android:layout_below="@+id/HPrice"
+            android:layout_toEndOf="@+id/HQuantity1"
             android:paddingTop="5dp"
             android:text=" "
             android:textColor="@color/black"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/Quantity1"
+            android:id="@+id/HQuantity1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Price"
-            android:layout_toEndOf="@+id/imageName"
+            android:layout_below="@+id/HPrice"
+            android:layout_toEndOf="@+id/HimageName"
             android:paddingTop="5dp"
             android:text="Quantity: "
             android:textColor="@color/black"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/Subtotal"
+            android:id="@+id/HSubtotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Quantity"
-            android:layout_toEndOf="@+id/SubTotal1"
+            android:layout_below="@+id/HQuantity"
+            android:layout_toEndOf="@+id/HSubTotal1"
             android:paddingTop="5dp"
             android:text=" "
             android:textColor="@color/red"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/SubTotal1"
+            android:id="@+id/HSubTotal1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Quantity"
-            android:layout_toEndOf="@+id/imageName"
+            android:layout_below="@+id/HQuantity"
+            android:layout_toEndOf="@+id/HimageName"
             android:paddingTop="5dp"
             android:text="Subtotal: "
             android:textColor="@color/black"
             android:textSize="15sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Subtotal"
-            android:gravity="center"
-            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/itemUpdate"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:text="Update"
-                android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/itemDelete"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Delete"
-                android:textAllCaps="false" />
-
-        </LinearLayout>
     </RelativeLayout>
 
 

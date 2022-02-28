@@ -3,22 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Add To Truck Back Up/AddtoTruck4/app/src/main/res/layout/activity_address.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/drawable/button_shape.xml" value="0.22205128205128205" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/drawable/button_shape3.xml" value="0.22205128205128205" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/drawable/empty_tall_divider.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/RHistory.xml" value="0.209375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_add.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_address.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_history.xml" value="0.209375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_maps.xml" value="0.16458333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_order_history.xml" value="0.209375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_order_recieve.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/activity_reciept.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/additem.xml" value="0.18" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/buyitem.xml" value="0.15" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/cart.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/cart.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/check_internet.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/checkout.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/checkout.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/click.xml" value="0.25" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/create.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/confirmation.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/create.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/cus_ord_list.xml" value="0.209375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/customer_order_address.xml" value="0.209375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/forgot.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/launcher.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/maintence.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/ordered.xml" value="0.20108695652173914" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/rhistory.xml" value="0.13645833333333332" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/row_items.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/shop.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/AddtoTruck4/app/src/main/res/layout/update_item.xml" value="0.18568840579710144" />

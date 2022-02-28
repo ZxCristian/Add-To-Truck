@@ -43,7 +43,8 @@
         android:background="@drawable/rounded"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Phone" />
+        app:layout_constraintTop_toBottomOf="@+id/Phone"
+        android:inputType="phone"/>
 
     <TextView
         android:id="@+id/Phone"
@@ -136,28 +137,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Landmark" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Drop Location"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:id="@+id/DLocation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditLandMark" />
-
-    <EditText
-        android:id="@+id/EditDLocation"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DLocation" />
 
     <Button
         android:id="@+id/delivery"
@@ -165,14 +144,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:text="Next"
-        android:clickable="true"
-        android:onClick="Maintenance"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditDLocation"
-        app:layout_constraintVertical_bias="0.503" />
+        app:layout_constraintTop_toBottomOf="@+id/EditLandMark"
+        app:layout_constraintVertical_bias="0.813" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,7 +42,8 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
         android:gravity="center"
-        android:id="@+id/Quantity"/>
+        android:id="@+id/Quantity"
+        android:inputType="number"/>
 
     <Button
         android:id="@+id/Update"
@@ -55,5 +56,15 @@
         android:gravity="center"
         android:text="Update"
         android:textAllCaps="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/sub1"
+        android:visibility="gone"/>
 
 </LinearLayout>

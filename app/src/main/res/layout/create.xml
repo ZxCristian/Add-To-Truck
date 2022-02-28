@@ -5,14 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
     tools:context=".create">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="362dp"
         android:layout_height="251dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="75dp"
         android:contentDescription="Add to Truck"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.673"
@@ -21,41 +20,22 @@
         app:srcCompat="@drawable/truck1"
         tools:ignore="HardcodedText" />
 
-    <EditText
-        android:id="@+id/user"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:hint="@string/username"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.044"
-        android:ems="30"/>
-
-
-
-
-
 
     <EditText
         android:id="@+id/fullname"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginBottom="164dp"
+        android:ems="30"
         android:hint="@string/full_name"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user"
-        app:layout_constraintVertical_bias="0.0"
-        android:ems="30"/>
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.261"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/em"
@@ -69,7 +49,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullname"
         app:layout_constraintVertical_bias="0.0"
-        android:ems="30"/>
+        android:ems="30"
+        android:textColor="@color/black"/>
 
 
 
@@ -87,7 +68,8 @@
         app:layout_constraintVertical_bias="0.0"
         app:passwordToggleEnabled="true"
         android:ems="30"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:textColor="@color/black"/>
 
 
 

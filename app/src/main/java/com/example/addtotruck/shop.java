@@ -23,6 +23,7 @@ public class shop extends AppCompatActivity {
     MainAdapter mainAdapter;
     FloatingActionButton floatingActionButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,10 +52,18 @@ public class shop extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(getApplicationContext(),cart.class));
+
             }
         });
-
+        floatingActionButton = (FloatingActionButton) findViewById(R.id.Ordered);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), History.class));
+            }
+        });
 
     }
 
